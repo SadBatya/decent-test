@@ -6,7 +6,6 @@ function CountriesInfo({ country }) {
       </p>
     );
   }
-  console.log(country);
   return (
     <div className="flex flex-col gap-4 flex-1 justify-center items-center text-center">
       <h1>Country: {country.name?.common}</h1>

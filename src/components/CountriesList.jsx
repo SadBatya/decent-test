@@ -27,7 +27,6 @@ export default function CountriesList({ onCountrySelect }) {
           {country.name.common}
         </button>
       ))}
-      <button>asdasdsad</button>
     </div>
   );
 }
