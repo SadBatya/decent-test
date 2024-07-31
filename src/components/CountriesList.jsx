@@ -19,14 +19,15 @@ export default function CountriesList({ onCountrySelect }) {
   return (
     <div className="flex flex-col text-left gap-2 overflow-y-auto max-h-screen">
       {countries.map((country, index) => (
-        <div
+        <button
           key={index}
-          className="border m-1 p-2 cursor-pointer hover:bg-gray-500 transition-all"
+          className="border"
           onClick={() => onCountrySelect(country)}
         >
           {country.name.common}
-        </div>
+        </button>
       ))}
+      <button>asdasdsad</button>
     </div>
   );
 }
