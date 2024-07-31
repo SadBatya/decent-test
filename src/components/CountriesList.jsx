@@ -3,7 +3,6 @@ import axios from "axios";
 
 export default function CountriesList({ onCountrySelect }) {
   const [countries, setCountries] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchCountries = async () => {
