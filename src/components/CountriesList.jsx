@@ -18,15 +18,19 @@ export default function CountriesList({ onCountrySelect }) {
 
   return (
     <div className="flex flex-col text-left gap-2 overflow-y-auto max-h-screen">
-      {countries.map((country, index) => (
-        <button
-          key={index}
-          className="border"
-          onClick={() => onCountrySelect(country)}
-        >
-          {country.name.common}
-        </button>
-      ))}
+      {countries.length ? (
+        countries.map((country, index) => (
+          <button
+            key={index}
+            className="border"
+            onClick={() => onCountrySelect(country)}
+          >
+            {country.name.common}
+          </button>
+        ))
+      ) : (
+        <div className="border border-red-600 p-2 m-4">Ошибка запроса API</div>
+      )}
     </div>
   );
 }
